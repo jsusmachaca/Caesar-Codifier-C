@@ -34,12 +34,12 @@ char encoder(char word[]) {
 int main(int arg, char *args[]) {
      char word[300];
      for (int i = 1; i < arg; i++){
-          if (strcmp(args[1], "-c") == 0 || strcmp(args[1], "--console") == 0 && arg <= 2){
+          if (strcmp(args[1], "-c") == 0 && arg <= 2 || strcmp(args[1], "--console") == 0 && arg <= 2){
                fgets(word, sizeof(word), stdin);
                encoder(word);
           }
 
-          else if(strcmp(args[1], "-c") != 0 && strcmp(args[1], "--help") != 0) {
+          else if(strcmp(args[1], "-c") != 0 && strcmp(args[1], "--help") != 0 && strcmp(args[1], "--console")) {
                encoder(args[i]);
           }
           
@@ -47,7 +47,7 @@ int main(int arg, char *args[]) {
                printf("ARGS:\nCodifier <WORD>, para codificar palabra por palabra .\n\nOPTIONS:\n-c, --console\nIngresar a modo consola para dictar palabras .\n\n");
                
           }else {
-               printf("Parametros incorrectos use --help para más información");
+               printf("Parametros incorrectos use --help para más información\n");
                break;
           }
      }
