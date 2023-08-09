@@ -39,7 +39,7 @@ int main(int arg, char *args[]) {
                encoder(word);
           }
 
-          else if(strcmp(args[1], "-c") != 0 && strcmp(args[1], "--help") != 0 && strcmp(args[1], "--console")) {
+          else if(strcmp(args[1], "-c") != 0 && strcmp(args[1], "--help") != 0 && strcmp(args[1], "--console") && args[1][0] != '-') {
                encoder(args[i]);
           }
           
