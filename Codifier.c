@@ -28,7 +28,7 @@ char encoder(char word[]) {
           }
      }    
      word_enc[strlen(word)] = '\0';
-     printf("Frase codificada => %s\n", word_enc);
+     printf("Frase codificada =>\n%s\n", word_enc);
 }
 
 int main(int arg, char *args[]) {
